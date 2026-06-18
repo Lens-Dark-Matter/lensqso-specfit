@@ -1,13 +1,8 @@
+# lensqso-specfit
 
-<img align="right" height="200" src="https://github.com/user-attachments/assets/0edc286e-a0b2-47e9-b233-64b23a633980"> 
+A Python package for jointly fitting the spectra of multiple gravitationally lensed quasar images, with flexibility for microlensing-induced spectral deformations.
 
-<h3><strong>$\Huge \texttt{lensqso-specfit}$</strong></h3>  
-
-A Python package for the joint spectral modeling of multiple gravitationally lensed quasar images, with flexibility to allow for microlensing deformations.
-
-See [example_usage/Example_notebook.ipynb](example_usage/Example_notebook.ipynb) for a demonstration on a simple example.
-
-
+See [filename](example_usage/Example_notebook.ipynb) for a demonstration on a simple example.
 
 ## Features
 
@@ -21,12 +16,11 @@ See [example_usage/Example_notebook.ipynb](example_usage/Example_notebook.ipynb)
 
 ```
 lensqso-specfit/
-├── QSO_spectral_features.py # Spectral component definitions (line profiles, doublet, continuum, templates)
-├── spectrum_model.py        # QuasarSpectrum class to represent a single spectrum (with LinearParamHandler)
-├── multi_spectrum.py        # MultiSpectrum class to jointly represent multiple spectra 
-├── multi_spec_fitter.py     # FittingSequence and optimizers/MCMC sampler
-├── FeII_template_4000_5500/ # Optical Fe II emission template data
-├── FeII+MgII_template_8300_11600.txt # NIR FeII+MgII emission template
+├── spectrum_model.py        # QuasarSpectrum and LinearParamHandler classes
+├── multi_spectrum.py        # MultiSpectrum class (joint model for N images)
+├── multi_spec_fitter.py     # Optimizer, PSO, MCMCSampler, FittingSequence
+├── QSO_spectral_features.py # Spectral component definitions (lines, continua, templates)
+├── FeII_template_4000_5500/ # Iron emission template data
 └── example_usage/           # Example spectra and Jupyter notebook showcasing the different features
 ```
 

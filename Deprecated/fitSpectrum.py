@@ -25,7 +25,7 @@ class agnspectrum:
        self.lamRest = lamRest
        self.feDictionary = feDictionary
         ###where to load in the FEs?
-    def checkPriors(self, pars,priors,parnames, printBad = True):
+    def checkPriors(self, pars,priors,parnames, printBad = False):
         logp = 0
 
         boo = numpy.any([(pars < priors[:, 0]), (pars > priors[:, 1])], axis=0)
